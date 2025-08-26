@@ -20,6 +20,41 @@
   const year = document.getElementById('year');
   if(year) year.textContent = new Date().getFullYear();
 
+  // Avatar: attempt common filenames and paths, fallback to placeholder
+  (function(){
+    const img = document.querySelector('img.avatar-img');
+    if(!img) return;
+    const candidates = [
+      'assets/img/photo.jpeg',
+      'assets/img/photo.jpg',
+      'assets/img/photo.png',
+      'assets/img/photo.webp',
+      'assets/photo.jpeg',
+      'assets/photo.jpg',
+      'photo.jpeg',
+      'photo.jpg'
+    ];
+    const placeholder = 'assets/img/profile-placeholder.svg';
+    const testNext = (i)=>{
+      if(i >= candidates.length){ img.src = placeholder; return; }
+      const url = candidates[i];
+      const probe = new Image();
+      probe.onload = ()=>{ img.src = url; };
+      probe.onerror = ()=>{ testNext(i+1); };
+      probe.src = url;
+    };
+    // Start probing only if current src is missing (404) or is already placeholder
+    const start = ()=>{
+      if(img.complete && img.naturalWidth > 0 && img.src.indexOf(placeholder) === -1){
+        return; // already loaded a real image
+      }
+      testNext(0);
+    };
+    // In case onerror fired earlier, schedule after load
+    if(document.readyState === 'complete') start();
+    else window.addEventListener('load', start);
+  })();
+
   // Smooth-scroll for same-page anchors
   document.addEventListener('click', (e)=>{
     const a = e.target.closest('a[href^="#"]');
