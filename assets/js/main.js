@@ -25,6 +25,7 @@
     const img = document.querySelector('img.avatar-img');
     if(!img) return;
     const candidates = [
+      'assets/img/heanloong.jpg',
       'assets/img/HeanLoong01.png',
       'assets/img/photo.jpeg',
       'assets/img/photo.jpg',
