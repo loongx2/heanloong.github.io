@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal website of Hean Loong – software engineer, builder, and lifelong learner." />
+    <title>Hean Loong • Personal Site</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="logo" href="#home" aria-label="Home">HL</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="sun" aria-hidden="true">☀️</span>
+          <span class="moon" aria-hidden="true">🌙</span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="home" class="section hero">
+        <div class="container grid-two">
+          <div>
+            <h1 class="title">Hi, I'm <span class="accent">Hean&nbsp;Loong</span></h1>
+            <p class="subtitle">I build clean, reliable software and share what I learn along the way.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+            <ul class="socials">
+              <li><a rel="me" href="https://github.com/loongx2" target="_blank" aria-label="GitHub">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/heanloong" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+              <li><a href="mailto:hello@heanloong.dev" aria-label="Email">Email</a></li>
+            </ul>
+          </div>
+          <div class="hero-card">
+            <div class="avatar" role="img" aria-label="Profile avatar"></div>
+            <ul class="quick-facts">
+              <li>Software Engineer</li>
+              <li>Web • Cloud • Automation</li>
+              <li>Based in 🌏</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            I'm a pragmatic engineer who enjoys turning ideas into products. I care about
+            sound architecture, great DX, and incremental delivery. This site is a simple,
+            fast, no-build static page designed to work seamlessly on GitHub Pages.
+          </p>
+          <p>
+            When I'm not coding, you'll probably find me reading, tinkering with dev tooling,
+            or experimenting with tiny side projects.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Project One</h3>
+              <p>A brief description of something you're proud of. Replace with your actual work.</p>
+              <div class="card-actions">
+                <a class="btn small" href="https://github.com/loongx2" target="_blank">Code</a>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Project Two</h3>
+              <p>Another highlight. Consider adding a screenshot in assets/img and linking it here.</p>
+              <div class="card-actions">
+                <a class="btn small" href="#" aria-disabled="true">Live</a>
+                <a class="btn small" href="https://github.com/loongx2" target="_blank">Code</a>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Automation Toolkit</h3>
+              <p>Scripts and templates to bootstrap new projects with sane defaults.</p>
+              <div class="card-actions">
+                <a class="btn small" href="https://github.com/loongx2" target="_blank">Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            Want to collaborate or say hi? The fastest way to reach me is via email.
+          </p>
+          <p>
+            <a class="btn primary" href="mailto:hello@heanloong.dev">hello@heanloong.dev</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> Hean Loong. Built with plain HTML/CSS/JS. Hosted on GitHub Pages.
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
